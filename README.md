@@ -8,18 +8,26 @@ This repo containerizes a Python Flask app with Postgres -- it has separate deve
 # Build Instructions
 ## Development
 Spin up containers and build image
-```docker compose up -d --build```
+
+`docker compose up -d --build`
+
 Create database table
-```docker compose exec web python manage.py create_db```
+
+`docker compose exec web python manage.py create_db`
+
 Remove volumes and containers (when done using)
-```docker compose down -v```
+
+`docker compose down -v`
 
 ## Production
 Spin up containers and build image
-```docker compose -f docker-compose.prod.yml up -d --build```
+
+`docker compose -f docker-compose.prod.yml up -d --build`
+
 Create database table
-```docker compose -f docker-compose.prod.yml exec web python manage.py create_db```
+
+`docker compose -f docker-compose.prod.yml exec web python manage.py create_db`
+
 Remove volumes and containers (when done using)
-```docker compose -f docker-compose.prod.yml down -v```
 
-
+`docker compose -f docker-compose.prod.yml down -v`
